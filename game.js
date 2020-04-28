@@ -1,6 +1,14 @@
 //
 // Vector2d
 //
+
+var can = document.getElementById("game-layer");
+// var background = new Image();
+// background.src = "assets/back.jpg";
+// background.onload = function(){
+//     ctx.drawImage(background,0,0);
+// }
+
 var Vector2d = function (x, y) {
     this.x = x;
     this.y = y;
@@ -614,11 +622,11 @@ var renderer3d = (function () {
 
         // Create a scene
         _scene = new THREE.Scene();
-        _scene.background = new THREE.Color(0x1111FF);
+        _scene.background = new THREE.Color(0x0011FF);
         _scene.fog = new THREE.Fog(0x0000FF, 100, 10);
 
         // Setup WebGLRenderer
-        _glRenderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true });
+        _glRenderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true});
         _glRenderer.setPixelRatio(window.devicePixelRatio);
         _glRenderer.shadowMap.enabled = true;
         _glRenderer.shadowMap.type = THREE.PCFSoftShadowMap;

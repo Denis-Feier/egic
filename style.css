@@ -24,13 +24,16 @@ body {
 .canvas-container {
     position: relative;
     min-width: 640px;
+    background-color: #227dde;
 }
 
 #game-layer {
     width: 100%;
     vertical-align: top;
-
+    background: #227dde;
     z-index: 0;
+    background: url("assets/back.jpg");
+    background-size: cover;
 }
 
 #title {
@@ -38,7 +41,7 @@ body {
     font-size: 36px;
     text-align: center;
     line-height: 1em;
-
+    color: red;
     position: absolute;
     z-index: 1;
 }
